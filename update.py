@@ -2,41 +2,45 @@ import argparse
 import os
 import shutil
 
-blocklist = [".git", "update.py", "README.md"]
+BLOCKLIST = [".git", "update.py", "README.md"]
+HOMEDIR = os.environ.get("HOME")
+
+
+def main():
+    args = parse_args()
+    if args.update_target:
+        handle_dir(args.update_target, ".")
+
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("direction", choices=["homedir", "repo"])
+    parser.add_argument("update_target", choices=["homedir", "repo"])
 
     return parser.parse_args()
 
-def update(dir: str):
-    for file_or_dir in os.listdir("."):
-        if file_or_dir in blocklist: continue
 
-        homedir_file_or_dir = os.path.join(os.environ.get("HOME"), file_or_dir)
+def handle_dir(update_target: str, directory):
+    for file_or_dir in os.listdir(directory):
+        if file_or_dir in BLOCKLIST: continue
 
-        copy_func = None
-        remove_func = None
+        file_or_dir = os.path.join(directory, file_or_dir)
 
-        if os.path.isdir(file_or_dir):
-            remove_func=shutil.rmtree
-            copy_func=shutil.copytree
-        elif os.path.isfile(file_or_dir):
-            remove_func=os.remove
-            copy_func=shutil.copy
+        if os.path.isfile(file_or_dir):
+            handle_file(update_target, file_or_dir)
+        elif os.path.isdir(file_or_dir):
+            handle_dir(update_target, file_or_dir)
 
-        if dir == "homedir":
-            if os.path.exists(homedir_file_or_dir):
-                remove_func(homedir_file_or_dir)
-            copy_func(file_or_dir, homedir_file_or_dir)
-        elif dir == "repo":
-            if os.path.exists(file_or_dir):
-                remove_func(file_or_dir)
-            copy_func(homedir_file_or_dir, file_or_dir)
+
+def handle_file(update_target, file_path):
+    homedir_file = os.path.join(os.environ.get("HOME"), file_path)
+
+    if update_target == "repo":
+        os.remove(file_path)
+        shutil.copy(homedir_file, file_path)
+    elif update_target == "homedir":
+        os.remove(homedir_file)
+        shutil.copy(file_path, homedir_file)
 
 
 if __name__ == "__main__":
-    args = parse_args()
-    if args.direction:
-        update(args.direction)
+    main()
