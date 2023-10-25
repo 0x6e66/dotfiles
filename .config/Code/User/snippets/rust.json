@@ -1,5 +1,5 @@
 {
-	"Create mod tests": {
+	"create test module": {
 		"prefix": "testmod",
 		"body": [
 			"#[cfg(test)]",
@@ -9,9 +9,9 @@
 			"	$1",
 			"}"
 		],
-		"description": "Log output to console"
+		"description": "create a module for tests"
 	},
-	"Create test case": {
+	"create test case": {
 		"prefix": "testcase",
 		"body": [
 			"#[test]",
@@ -19,6 +19,6 @@
 			"	$2",
 			"}"
 		],
-		"description": "Log output to console"
+		"description": "create a test case"
 	}
 }
