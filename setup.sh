@@ -120,21 +120,27 @@ dotfiles () {
 librewolf_extenstions () {
     mkdir /tmp/librewolf_extenstions
 
-    wget -O /tmp/librewolf_extenstions/ublock_origin-1.56.0.xpi           https://addons.mozilla.org/firefox/downloads/file/4237670/ublock_origin-1.56.0.xpi
-    wget -O /tmp/librewolf_extenstions/clearurls-1.26.1.xpi               https://addons.mozilla.org/firefox/downloads/file/4064884/clearurls-1.26.1.xpi
-    wget -O /tmp/librewolf_extenstions/keepassxc_browser-1.9.0.1.xpi      https://addons.mozilla.org/firefox/downloads/file/4246845/keepassxc_browser-1.9.0.1.xpi
-    wget -O /tmp/librewolf_extenstions/noscript-11.4.29.xpi               https://addons.mozilla.org/firefox/downloads/file/4206186/noscript-11.4.29.xpi
-    wget -O /tmp/librewolf_extenstions/privacy_badger17-2024.2.6.xpi      https://addons.mozilla.org/firefox/downloads/file/4232703/privacy_badger17-2024.2.6.xpi
-    wget -O /tmp/librewolf_extenstions/tree_style_tab-4.0.3.xpi           https://addons.mozilla.org/firefox/downloads/file/4249095/tree_style_tab-4.0.3.xpi
+    wget -O /tmp/librewolf_extenstions/clearurls-latest.xpi             https://addons.mozilla.org/firefox/downloads/file/4064884/clearurls-latest.xpi
+    wget -O /tmp/librewolf_extenstions/keepassxc_browser-latest.xpi     https://addons.mozilla.org/firefox/downloads/file/4246845/keepassxc_browser-latest.xpi
+    wget -O /tmp/librewolf_extenstions/noscript-latest.xpi              https://addons.mozilla.org/firefox/downloads/file/4206186/noscript-latest.xpi
+    wget -O /tmp/librewolf_extenstions/privacy_badger17-latest.xpi      https://addons.mozilla.org/firefox/downloads/file/4232703/privacy_badger17-latest.xpi
+    wget -O /tmp/librewolf_extenstions/tree_style_tab-latest.xpi        https://addons.mozilla.org/firefox/downloads/file/4249095/tree_style_tab-latest.xpi
+    wget -O /tmp/librewolf_extenstions/ublock_origin-latest.xpi         https://addons.mozilla.org/firefox/downloads/file/4237670/ublock_origin-latest.xpi
     
     librewolf /tmp/librewolf_extenstions/*.xpi
 }
 #####################################################################################################
 
 
+# download and install all specified programs from official repos
 pacman_programs
+# download and install all specified programs from the aur
 aur_programs
+# configures programs (enabling deamons, add user to groups, etc.)
 program_configs
+# install blesh from git
 blesh
+# move dotfiles to home
 dotfiles
+# download and install extenstions for librewolf
 librewolf_extenstions
