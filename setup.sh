@@ -47,6 +47,7 @@ aur_programs () {
     aur_programs_to_install="
         etcher-bin
         freetube-bin
+        librewolf-bin
         nordvpn-bin
         openrgb-bin
         spotify-launcher
@@ -76,6 +77,7 @@ program_configs () {
     #### vscode ####
     code --install-extension bierner.markdown-preview-github-styles
     code --install-extension bierner.markdown-mermaid
+    code --install-extension ms-python.python
     code --install-extension ms-python.vscode-pylance
     code --install-extension ms-toolsai.jupyter
     code --install-extension mhutchie.git-graph
@@ -113,8 +115,26 @@ dotfiles () {
 }
 #####################################################################################################
 
+
+####################################### librewolf extenstions #######################################
+librewolf_extenstions () {
+    mkdir /tmp/librewolf_extenstions
+
+    wget -O /tmp/librewolf_extenstions/ublock_origin-1.56.0.xpi           https://addons.mozilla.org/firefox/downloads/file/4237670/ublock_origin-1.56.0.xpi
+    wget -O /tmp/librewolf_extenstions/clearurls-1.26.1.xpi               https://addons.mozilla.org/firefox/downloads/file/4064884/clearurls-1.26.1.xpi
+    wget -O /tmp/librewolf_extenstions/keepassxc_browser-1.9.0.1.xpi      https://addons.mozilla.org/firefox/downloads/file/4246845/keepassxc_browser-1.9.0.1.xpi
+    wget -O /tmp/librewolf_extenstions/noscript-11.4.29.xpi               https://addons.mozilla.org/firefox/downloads/file/4206186/noscript-11.4.29.xpi
+    wget -O /tmp/librewolf_extenstions/privacy_badger17-2024.2.6.xpi      https://addons.mozilla.org/firefox/downloads/file/4232703/privacy_badger17-2024.2.6.xpi
+    wget -O /tmp/librewolf_extenstions/tree_style_tab-4.0.3.xpi           https://addons.mozilla.org/firefox/downloads/file/4249095/tree_style_tab-4.0.3.xpi
+    
+    librewolf /tmp/librewolf_extenstions/*.xpi
+}
+#####################################################################################################
+
+
 pacman_programs
 aur_programs
 program_configs
 blesh
 dotfiles
+librewolf_extenstions
