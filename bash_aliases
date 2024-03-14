@@ -1,4 +1,5 @@
-# aliases
+#!/bin/bash
+
 alias ll='ls -lh'
 alias la='ls -Alh'
 alias l='ls -CF'
