@@ -38,6 +38,11 @@ pacman_programs () {
         yay
     "
     sudo pacman -Syu $pacman_programs_to_install
+
+    pacman_programs_to_uninstall="
+        firefox
+    "
+    sudo pacman -Rns $pacman_programs_to_uninstall
 }
 #####################################################################################################
 
@@ -132,6 +137,13 @@ librewolf_extenstions () {
 #####################################################################################################
 
 
+############################################# ssh key ###############################################
+ssh_keygen () {
+    ssh-keygen -t rsa -b 4096
+}
+#####################################################################################################
+
+
 # download and install all specified programs from official repos
 pacman_programs
 # download and install all specified programs from the aur
@@ -144,3 +156,5 @@ blesh
 dotfiles
 # download and install extenstions for librewolf
 librewolf_extenstions
+# create a new ssh key pair
+ssh_keygen
