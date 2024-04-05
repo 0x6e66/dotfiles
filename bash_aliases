@@ -1,5 +1,4 @@
-#!/bin/bash
-
+# aliases
 alias ll='ls -lh'
 alias la='ls -Alh'
 alias l='ls -CF'
@@ -15,3 +14,5 @@ alias nordup='nordvpn c de && nordvpn set killswitch 1'
 alias norddown='nordvpn d && nordvpn set killswitch 0'
 
 alias update='sudo pacman -Syu && yay -Syu --noconfirm'
+
+alias gc="cd ~/git; git clone "
