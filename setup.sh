@@ -90,6 +90,7 @@ program_configs () {
     code --install-extension streetsidesoftware.code-spell-checker-german
     code --install-extension tamasfe.even-better-toml
     code --install-extension tomoki1207.pdf
+    code --install-extension yzhang.markdown-all-in-one
 
     #### plasma ####
     lookandfeeltool -a org.manjaro.breath-dark.desktop
