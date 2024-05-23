@@ -145,17 +145,42 @@ ssh_keygen () {
 #####################################################################################################
 
 
-# download and install all specified programs from official repos
-pacman_programs
-# download and install all specified programs from the aur
-aur_programs
-# configures programs (enabling deamons, add user to groups, etc.)
-program_configs
-# install blesh from git
-blesh
-# move dotfiles to home
-dotfiles
-# download and install extenstions for librewolf
-librewolf_extenstions
-# create a new ssh key pair
-ssh_keygen
+## download and install all specified programs from official repos
+# pacman_programs
+
+## download and install all specified programs from the aur
+# aur_programs
+
+## configures programs (enabling deamons, add user to groups, etc.)
+# program_configs
+
+## install blesh from git
+# blesh
+
+## move dotfiles to home
+# dotfiles
+
+## download and install extenstions for librewolf
+#librewolf_extenstions
+
+## create a new ssh key pair
+# ssh_keygen
+
+
+if [[ $1 == "dotfiles" ]]; then
+    blesh
+    dotfiles
+elif [[ $1 == "setup" ]]; then
+    pacman_programs
+    aur_programs
+    program_configs
+    blesh
+    dotfiles
+    librewolf_extensions
+    ssh_keygen
+else 
+    echo "run either './setup.sh dotfiles' or './setup.sh setup'"
+    exit 1 
+fi
+
+
