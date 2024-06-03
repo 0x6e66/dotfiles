@@ -43,6 +43,9 @@ pacman_programs () {
         firefox
     "
     sudo pacman -Rns $pacman_programs_to_uninstall
+
+
+    sudo pacman -S --needed base-devel
 }
 #####################################################################################################
 
@@ -52,6 +55,7 @@ aur_programs () {
     aur_programs_to_install="
         etcher-bin
         freetube-bin
+        headsetcontrol
         librewolf-bin
         nordvpn-bin
         openrgb-bin
@@ -95,6 +99,7 @@ program_configs () {
     code --install-extension streetsidesoftware.code-spell-checker-german
     code --install-extension tamasfe.even-better-toml
     code --install-extension tomoki1207.pdf
+    code --install-extension vscodevim.vim
     code --install-extension yzhang.markdown-all-in-one
 
     #### plasma ####
@@ -122,8 +127,8 @@ dotfiles () {
 #####################################################################################################
 
 
-####################################### librewolf extenstions #######################################
-librewolf_extenstions () {
+####################################### librewolf extenstion #######################################
+librewolf_extensions () {
     mkdir /tmp/librewolf_extenstions
 
     wget -O /tmp/librewolf_extenstions/clearurls-latest.xpi             https://addons.mozilla.org/firefox/downloads/file/4064884/clearurls-latest.xpi
@@ -145,28 +150,6 @@ ssh_keygen () {
 #####################################################################################################
 
 
-## download and install all specified programs from official repos
-# pacman_programs
-
-## download and install all specified programs from the aur
-# aur_programs
-
-## configures programs (enabling deamons, add user to groups, etc.)
-# program_configs
-
-## install blesh from git
-# blesh
-
-## move dotfiles to home
-# dotfiles
-
-## download and install extenstions for librewolf
-#librewolf_extenstions
-
-## create a new ssh key pair
-# ssh_keygen
-
-
 if [[ $1 == "dotfiles" ]]; then
     blesh
     dotfiles
@@ -182,5 +165,4 @@ else
     echo "run either './setup.sh dotfiles' or './setup.sh setup'"
     exit 1 
 fi
-
 
