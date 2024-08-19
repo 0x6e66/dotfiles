@@ -86,6 +86,7 @@ program_configs () {
     #### vscode ####
     code --install-extension bierner.markdown-preview-github-styles
     code --install-extension bierner.markdown-mermaid
+    code --install-extension fill-labs.dependi
     code --install-extension ms-python.python
     code --install-extension ms-python.vscode-pylance
     code --install-extension ms-toolsai.jupyter
@@ -94,7 +95,6 @@ program_configs () {
     code --install-extension redhat.vscode-xml
     code --install-extension redhat.vscode-yaml
     code --install-extension rust-lang.rust-analyzer
-    code --install-extension serayuzgur.crates
     code --install-extension streetsidesoftware.code-spell-checker
     code --install-extension streetsidesoftware.code-spell-checker-german
     code --install-extension tamasfe.even-better-toml
