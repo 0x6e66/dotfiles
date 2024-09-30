@@ -36,6 +36,7 @@ pacman_programs () {
         virtualbox
         wireshark-qt
         yay
+        stow
     "
     sudo pacman -Syu $pacman_programs_to_install
 
@@ -118,11 +119,8 @@ blesh () {
 
 ############################################## dotfiles #############################################
 dotfiles () {
-    dir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-    cp $dir/vimrc ~/.vimrc
-    cp $dir/bashrc ~/.bashrc
-    cp $dir/bash_aliases ~/.bash_aliases
-    cp $dir/config/Code/User/snippets/*.json ~/.config/Code/User/snippets/
+    sudo pacman -S stow
+    stow -d dotfiles/ .
 }
 #####################################################################################################
 
