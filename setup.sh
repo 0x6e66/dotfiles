@@ -21,14 +21,17 @@ pacman_programs () {
         keepassxc
         make
         mattermost-desktop
+        neovim
         net-tools
         nextcloud-client
         pdftk
         pkgconf
         qbittorrent
+        ripgrep
         rustup
         signal-desktop
         steam-native-runtime
+        stow
         thunderbird
         tree
         typst
@@ -36,7 +39,6 @@ pacman_programs () {
         virtualbox
         wireshark-qt
         yay
-        stow
     "
     sudo pacman -Syu $pacman_programs_to_install
 
