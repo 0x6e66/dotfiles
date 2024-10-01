@@ -131,5 +131,5 @@ fi
 # ble.sh
 source ~/.local/share/blesh/ble.sh
 
-export EDITOR='/usr/bin/vim'
+export EDITOR='/usr/bin/nvim'
 export PATH=$PATH:/home/$USER/bin
