@@ -13,3 +13,4 @@ alias set-headset-rgb='headsetcontrol -l 0'
 alias update='sudo pacman -Syu && yay -Syu --noconfirm'
 
 alias gc="cd ~/git; git clone "
+alias v="nvim"
