@@ -31,6 +31,18 @@ vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuz
 vim.keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
 vim.keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
 
--- vim.keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
--- vim.keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
+-- auto sessions
+vim.keymap.set("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session for cwd" })
+vim.keymap.set("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save session for auto ession root dir" })
 
+-- substitute
+-- keymaps defined in plugins/substitute.lua
+
+-- lspconfig
+-- keymaps defined in plugins/lsp/lspconfig.lua
+
+-- trouble
+-- keymaps defined in plugins/trouble.lua
+
+-- formatting / conform
+-- keymaps defined in plugins/formatting.lua
