@@ -35,3 +35,7 @@ vim.opt.swapfile = false
 vim.opt.spell = true
 vim.opt.spelllang = { "en", "de" }
 vim.api.nvim_create_autocmd("TermOpen", { pattern = "term://*", command = "setlocal nospell" })
+
+
+-- lsp
+vim.lsp.inlay_hint.enable(true, {})
