@@ -7,8 +7,8 @@ vim.opt.showmode = true
 
 
 -- indentation
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.autoindent = true
 
@@ -39,3 +39,7 @@ vim.api.nvim_create_autocmd("TermOpen", { pattern = "term://*", command = "setlo
 
 -- lsp
 vim.lsp.inlay_hint.enable(true, {})
+
+
+-- clipboard
+vim.opt.clipboard = "unnamedplus"

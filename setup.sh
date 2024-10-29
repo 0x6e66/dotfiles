@@ -38,6 +38,7 @@ pacman_programs () {
         vim
         virtualbox
         wireshark-qt
+        xclip
         yay
     "
     sudo pacman -Syu $pacman_programs_to_install
