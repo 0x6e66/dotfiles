@@ -17,6 +17,7 @@ pacman_programs () {
         cmake
         discord
         docker
+        fzf
         gimp
         keepassxc
         make
