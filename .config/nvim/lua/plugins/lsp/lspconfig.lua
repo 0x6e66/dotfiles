@@ -101,14 +101,6 @@ return {
                 })
             end,
 
-            ["typst_lsp"] = function()
-                lspconfig["typst_lsp"].setup({
-                    settings = {
-                        exportPdf = "never",
-                    },
-                })
-            end,
-
             ["tinymist"] = function()
                 lspconfig["tinymist"].setup({
                     capabilities = capabilities,
