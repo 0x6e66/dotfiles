@@ -65,7 +65,6 @@ aur_programs () {
         nordvpn-bin
         openrgb-bin
         spotify-launcher
-        visual-studio-code-bin
     "
     yay -Syu --noconfirm $aur_programs_to_install
 }
@@ -87,25 +86,6 @@ program_configs () {
 
     #### rustup ####
     rustup default stable
-
-    #### vscode ####
-    code --install-extension bierner.markdown-preview-github-styles
-    code --install-extension bierner.markdown-mermaid
-    code --install-extension fill-labs.dependi
-    code --install-extension ms-python.python
-    code --install-extension ms-python.vscode-pylance
-    code --install-extension ms-toolsai.jupyter
-    code --install-extension mhutchie.git-graph
-    code --install-extension nvarner.typst-lsp
-    code --install-extension redhat.vscode-xml
-    code --install-extension redhat.vscode-yaml
-    code --install-extension rust-lang.rust-analyzer
-    code --install-extension streetsidesoftware.code-spell-checker
-    code --install-extension streetsidesoftware.code-spell-checker-german
-    code --install-extension tamasfe.even-better-toml
-    code --install-extension tomoki1207.pdf
-    code --install-extension vscodevim.vim
-    code --install-extension yzhang.markdown-all-in-one
 
     #### plasma ####
     lookandfeeltool -a org.manjaro.breath-dark.desktop
