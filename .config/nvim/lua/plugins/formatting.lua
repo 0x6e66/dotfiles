@@ -11,7 +11,7 @@ return {
                 -- markdown = { "prettier" },
                 rust = { "rustfmt" },
                 -- lsp_format = "prefer"
-                -- typst = { "typstyle" },
+                typst = { "typstfmt" },
                 -- python = { "isort", "black" },
             },
             format_on_save = {

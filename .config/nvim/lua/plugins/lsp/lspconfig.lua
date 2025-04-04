@@ -109,11 +109,6 @@ return {
                         return vim.fn.getcwd()
                     end,
                     offset_encoding = "utf-8",
-                    settings = {
-                        formatterMode = "typstfmt",
-                        formatterPrintWidth = 90,
-                        formatterIndentSize = 2,
-                    }
                 })
             end,
         })
