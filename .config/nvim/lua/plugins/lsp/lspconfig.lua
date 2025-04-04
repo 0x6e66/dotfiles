@@ -108,7 +108,12 @@ return {
                     root_dir = function()
                         return vim.fn.getcwd()
                     end,
-                    settings = {}
+                    offset_encoding = "utf-8",
+                    settings = {
+                        formatterMode = "typstfmt",
+                        formatterPrintWidth = 90,
+                        formatterIndentSize = 2,
+                    }
                 })
             end,
         })
