@@ -31,7 +31,6 @@ return {
             ensure_installed = {
                 "isort",
                 "black",
-                "typstfmt",
                 "jq",
                 "pylint",
             },
