@@ -8,9 +8,14 @@ alias du='du -sh'
 
 alias ..='cd ..'
 
-alias set-headset-rgb='headsetcontrol -l 0'
-
 alias update='sudo pacman -Syu && yay -Syu --noconfirm'
 
-alias gc="cd ~/git; git clone "
 alias v="nvim"
+
+alias gc="cd ~/git; git clone "
+alias gs="git status"
+alias gm="git commit "
+alias gp="git push"
+alias gd="git diff"
+alias ga="git add"
+
