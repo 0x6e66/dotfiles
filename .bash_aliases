@@ -18,4 +18,5 @@ alias gm="git commit "
 alias gp="git push"
 alias gd="git diff"
 alias ga="git add"
+alias gg="git graph"
 
