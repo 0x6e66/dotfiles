@@ -8,8 +8,6 @@ alias du='du -sh'
 
 alias ..='cd ..'
 
-alias update='sudo pacman -Syu && yay -Syu --noconfirm'
-
 alias v="nvim"
 
 alias gc="cd ~/git; git clone "
