@@ -20,3 +20,4 @@ alias gd="git diff"
 alias ga="git add"
 alias gg="git graph"
 
+alias bright='qdbus org.kde.Solid.PowerManagement /org/kde/Solid/PowerManagement/Actions/BrightnessControl org.kde.Solid.PowerManagement.Actions.BrightnessControl.setBrightness'
