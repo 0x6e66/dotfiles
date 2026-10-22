@@ -105,9 +105,12 @@ git config --global alias.graph 'log --all --decorate --oneline --graph'
 alias gs="git status"
 alias gm="git commit "
 alias gp="git push"
-alias gd="git diff"
+# no paging with less if output fits on a page
+alias gd='LESS="-F -X $LESS" git diff'
 alias ga="git add"
 alias gg="git graph"
+
+
 
 ############################ zsh-syntax-highlighting ############################
 
