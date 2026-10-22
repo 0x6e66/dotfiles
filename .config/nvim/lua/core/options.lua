@@ -43,3 +43,7 @@ vim.lsp.inlay_hint.enable(true, {})
 
 -- clipboard
 vim.opt.clipboard = "unnamedplus"
+
+
+-- shell
+vim.opt.shell = "/usr/bin/zsh"
