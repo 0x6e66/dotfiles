@@ -47,11 +47,13 @@ SAVEHIST=10000000
 PATH="$HOME/bin:/home/$USER/.cargo/bin:$HOME/go/bin:$HOME/.local/bin:/opt/archpkgs/bin:$PATH"
 
 
+
 ############################ exports ############################
 
 # fzf
 export FZF_DEFAULT_OPTS='--multi --no-height --extended --bind ctrl-a:select-all,ctrl-d:deselect-all,ctrl-t:toggle-all'
 export EDITOR="nvim"
+export LESS="-F -X $LESS"
 
 
 
@@ -62,6 +64,8 @@ eval "$(sheldon source)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 
 
@@ -101,12 +105,11 @@ alias cat="bat --paging=never"
 export BAT_STYLE="grid,header"
 
 # git
-git config --global alias.graph 'log --all --decorate --oneline --graph'
 alias gs="git status"
-alias gm="git commit "
+alias gm="git commit"
 alias gp="git push"
 # no paging with less if output fits on a page
-alias gd='LESS="-F -X $LESS" git diff'
+alias gd="git diff"
 alias ga="git add"
 alias gg="git graph"
 
