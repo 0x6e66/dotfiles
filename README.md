@@ -1,1 +1,0 @@
-# dotfiles and manjaro setup
