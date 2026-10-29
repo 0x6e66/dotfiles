@@ -53,7 +53,6 @@ PATH="$HOME/bin:/home/$USER/.cargo/bin:$HOME/go/bin:$HOME/.local/bin:/opt/archpk
 # fzf
 export FZF_DEFAULT_OPTS='--multi --no-height --extended --bind ctrl-a:select-all,ctrl-d:deselect-all,ctrl-t:toggle-all'
 export EDITOR="nvim"
-export LESS="-F -X $LESS"
 
 
 
