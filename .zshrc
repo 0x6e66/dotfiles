@@ -48,6 +48,13 @@ PATH="$HOME/bin:/home/$USER/.cargo/bin:$HOME/go/bin:$HOME/.local/bin:/opt/archpk
 
 
 
+
+############################ direnv ############################
+
+eval "$(direnv hook zsh)"
+
+
+
 ############################ exports ############################
 
 # fzf
