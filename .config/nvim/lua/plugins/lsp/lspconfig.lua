@@ -111,6 +111,62 @@ return {
                     offset_encoding = "utf-8",
                 })
             end,
+
+            ["yamlls"] = function()
+                lspconfig["yamlls"].setup({
+                    capabilities = capabilities,
+                    settings = {
+                        yaml = {
+                            validate = true,
+                            completion = true,
+                            hover = true,
+                            -- SchemaStore auto-matches schemas for common YAML filenames.
+                            schemaStore = {
+                                enable = false,
+                                url = "https://www.schemastore.org/api/json/catalog.json",
+                            },
+                            -- Add explicit schema-to-file matches here:
+                            schemas = {
+                                ['jsonschemas/appendix.json'] = 'config/appendix.yml',
+                                ['jsonschemas/certificate.json'] = 'config/certificate.yml',
+                                ['jsonschemas/cleanup.json'] = 'results/cleanup.yml',
+                                ['jsonschemas/document_layouts.json'] = 'templates/layouts/*.yml',
+                                ['jsonschemas/excel_objective_lists_config.json'] =
+                                'templates/risk-register/excel_objective_lists_config.yml',
+                                ['jsonschemas/excel_risiko_matrix_config.json'] =
+                                'templates/risk-register/excel_risiko_matrix_config.yml',
+                                ['jsonschemas/excel_risk_register_config.json'] =
+                                'templates/risk-register/excel_risk_register_config.yml',
+                                ['jsonschemas/excel_system_overview_config.json'] =
+                                'templates/risk-register/excel_system_overview_config.yml',
+                                ['jsonschemas/excel_title_page_config.json'] =
+                                'templates/risk-register/excel_title_page_config.yml',
+                                ['jsonschemas/finding.json'] = {
+                                    'findings/**/*.yml',
+                                    'findings/*.yml',
+                                    'templates/findings/**/*.yml',
+                                },
+                                ['jsonschemas/glossary.json'] = 'templates/report/glossary.yml',
+                                ['jsonschemas/groups.json'] = 'config/groups.yml',
+                                ['jsonschemas/presentation.json'] = 'config/presentation.yml',
+                                ['jsonschemas/project.json'] = 'config/project.yml',
+                                ['jsonschemas/reconnaissance.json'] = 'results/reconnaissance.yml',
+                                ['jsonschemas/report.json'] = 'config/report.yml',
+                                ['jsonschemas/scenario.json'] = {
+                                    'scenarios/*/scenario.yml',
+                                    'templates/scenarios/*/scenario.yml',
+                                },
+                                ['jsonschemas/attack_path.json'] = {
+                                    'scenarios/*/paths/*.yml',
+                                    'templates/scenarios/*/paths/*.yml',
+                                },
+                                ['jsonschemas/sitemap.json'] = 'results/sitemap.yml',
+                                ['jsonschemas/system_overview.json'] = 'results/system_overview.yml',
+                            },
+                        },
+                    },
+                })
+            end,
         })
     end,
 }
