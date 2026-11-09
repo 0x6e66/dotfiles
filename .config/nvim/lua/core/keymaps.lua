@@ -31,9 +31,6 @@ vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuz
 vim.keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
 vim.keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
 
--- substitute
--- keymaps defined in plugins/substitute.lua
-
 -- lspconfig
 -- keymaps defined in plugins/lsp/lspconfig.lua
 
