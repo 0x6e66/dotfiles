@@ -1,0 +1,13 @@
+neovim
+    git
+    tree-sitter
+    tree-sitter-grammars
+    tar
+    curl
+    gcc
+    fzf
+    ripgrep
+    fd
+
+zsh
+    direnv
