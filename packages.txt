@@ -11,3 +11,7 @@ neovim
 
 zsh
     direnv
+
+rustup
+    pkgconf
+    gcc
