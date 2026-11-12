@@ -120,6 +120,9 @@ return {
                             validate = true,
                             completion = true,
                             hover = true,
+                            format = {
+                                enable = false,
+                            },
                             -- SchemaStore auto-matches schemas for common YAML filenames.
                             schemaStore = {
                                 enable = false,

@@ -7,15 +7,11 @@ return {
         conform.setup({
             formatters_by_ft = {
                 json = { "jq" },
-                -- yaml = { "prettier" },
-                -- markdown = { "prettier" },
                 rust = { "rustfmt" },
-                -- lsp_format = "prefer"
                 typst = { "typstfmt" },
-                -- python = { "isort", "black" },
             },
             format_on_save = {
-                lsp_fallback = true,
+                lsp_fallback = false,
                 async = false,
                 timeout_ms = 1000,
             },
