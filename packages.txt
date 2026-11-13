@@ -15,3 +15,5 @@ zsh
 rustup
     pkgconf
     gcc
+
+alsa-utils
